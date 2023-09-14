@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "me.champeau.jmh" version "0.7.1"
 }
 
 group = 'com.ib'
@@ -12,6 +13,9 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    jmh 'org.openjdk.jmh:jmh-core:1.37'
+    jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.37'
+    jmhAnnotationProcessor 'org.openjdk.jmh:jmh-generator-annprocess:1.37'
 }
 
 test {

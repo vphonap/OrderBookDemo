@@ -12,6 +12,10 @@ final class OrderBook {
     private TreeMap<Double, PriceLevel> bidLevels;
     private TreeMap<Double, PriceLevel> askLevels;
 
+    public void printStats()
+    {
+        System.out.println("OrderBook Stats, bids:"+bidLevels.size()+", asks:"+askLevels.size());
+    }
     public OrderBook()
     {
         //descending order for bids
@@ -23,6 +27,7 @@ final class OrderBook {
         askLevels = new TreeMap<>();
     }
 
+    static public void test() {}
     private TreeMap<Double, PriceLevel> getLevel(String side)
     {
         if (side.charAt(0) == 'B' || side.charAt(0) == 'b')

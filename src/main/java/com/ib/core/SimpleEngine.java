@@ -12,11 +12,16 @@ public class SimpleEngine implements Engine {
     //updateTime based tracker
     private HashMap<Long, List<Order>> updateTimeBuckets;
 
+    public void printStats()
+    {
+        System.out.println("@@@@@@Ordertable size:"+orderTable.size()+", timebuckets size:"+updateTimeBuckets.size());
+        orderBook.printStats();
+    }
     public SimpleEngine()
     {
         orderBook = new OrderBook();
-        orderTable = new HashMap<>();
-        updateTimeBuckets = new HashMap<>();
+        orderTable = new HashMap<>(20000000);
+        updateTimeBuckets = new HashMap<>(20000000);
     }
 
     public boolean addOrder(Order m)

@@ -5,6 +5,7 @@ import com.messages.Order;
 
 public interface Engine {
 
+    public void printStats();
     boolean addOrder(Order m);
     boolean removeOrder(String orderid);
     boolean replaceOrder(Order m);
